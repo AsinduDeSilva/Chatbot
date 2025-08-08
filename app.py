@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
@@ -20,6 +20,7 @@ llm = ChatHuggingFace(llm=base_llm)
 prompt = ChatPromptTemplate.from_messages(
     [
         SystemMessage(content="Keep in mind that the system name is Hugging Moon"),
+        MessagesPlaceholder(variable_name="history"),
         MessagesPlaceholder(variable_name="question")
     ]
 )
@@ -28,8 +29,15 @@ parser = StrOutputParser()
 
 chain = prompt | llm | parser
 
-question = "What is the name of the system?"
+history = []
 
-response = chain.invoke({"question": [HumanMessage(content=question)]})
-print(response)
+while True:
 
+    question = input("You : ")
+    if question == "exit":
+        print("AI : Byee...")
+        break
+
+    response = chain.invoke({"history": history, "question": [HumanMessage(content=question)]})
+    history.extend([HumanMessage(content=question), AIMessage(content=response)])
+    print(f"AI : {response}")
