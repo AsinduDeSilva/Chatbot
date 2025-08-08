@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae6ea13-1eb4-456f-8a69-4473f3562511" name="Changes" comment="Implement feat: Getting a response from LLM">
+    <list default="true" id="bae6ea13-1eb4-456f-8a69-4473f3562511" name="Changes" comment="Implement feat: History based responses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -78,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1754685219361</updated>
-      <workItem from="1754685222123" duration="7115000" />
+      <workItem from="1754685222123" duration="8097000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize HuggingFace LLM">
       <option name="closed" value="true" />
@@ -112,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754690355709</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement feat: History based responses">
+      <option name="closed" value="true" />
+      <created>1754693839063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754693839063</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,9 +131,10 @@
     <MESSAGE value="Initialize prompt template" />
     <MESSAGE value="Initialize output parser" />
     <MESSAGE value="Implement feat: Getting a response from LLM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement feat: Getting a response from LLM" />
+    <MESSAGE value="Implement feat: History based responses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement feat: History based responses" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/chatbot$app.coverage" NAME="app Coverage Results" MODIFIED="1754693308368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chatbot$app.coverage" NAME="app Coverage Results" MODIFIED="1754694379142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

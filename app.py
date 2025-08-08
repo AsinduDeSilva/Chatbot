@@ -40,4 +40,6 @@ while True:
 
     response = chain.invoke({"history": history, "question": [HumanMessage(content=question)]})
     history.extend([HumanMessage(content=question), AIMessage(content=response)])
+    history = history[-20:]
+
     print(f"AI : {response}")
