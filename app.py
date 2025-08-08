@@ -1,5 +1,7 @@
 import os
 from dotenv import load_dotenv
+from langchain_core.messages import SystemMessage
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 
 load_dotenv()
@@ -13,6 +15,13 @@ base_llm = HuggingFaceEndpoint(
 )
 
 llm = ChatHuggingFace(llm=base_llm)
+
+prompt = ChatPromptTemplate.from_messages(
+    [
+        SystemMessage(content="Keep in mind that the system name is Hugging Moon"),
+        MessagesPlaceholder(variable_name="question")
+    ]
+)
 
 
 
