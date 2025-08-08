@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage
+from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 
@@ -23,5 +24,4 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-
-
+parser = StrOutputParser()
